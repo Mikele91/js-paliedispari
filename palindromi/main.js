@@ -4,13 +4,11 @@
 function isPalindorome(string){
     var newString ="";
     for (var i = string.length - 1; i >= 0; i--) { 
-        newString += string[i]; // or newString = newString + str[i];
+        newString += string[i]; // or newString = newString + string[i]; 
         
-        return  newString;
-
-
     }
-
+    
+    return  newString;
 
 }
 
@@ -22,9 +20,12 @@ while(!isNaN(parola)){
 }
 
 console.log(parola);
+console.log(isPalindorome(parola));
 
 
-if(isPalindorome(parola)){
-    alert( " SI è palinroma");
+if(isPalindorome(parola) == parola){
+    alert( " SI è palindroma");
+}else{
+    alert(" non è palindroma")
 }
 
