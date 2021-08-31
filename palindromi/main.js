@@ -4,7 +4,7 @@
 function isPalindorome(string){
     var newString ="";
     for (var i = string.length - 1; i >= 0; i--) { 
-        newString += str[i]; // or newString = newString + str[i];
+        newString += string[i]; // or newString = newString + str[i];
         
         return  newString;
 
