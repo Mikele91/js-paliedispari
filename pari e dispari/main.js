@@ -8,7 +8,6 @@ function numeroRandom(min, max){
 
 }
 
-
  function isEven(num1){
      if((num1 % 2) ==0){
         return true;
@@ -24,13 +23,13 @@ function numeroRandom(min, max){
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 var scelta = prompt("inserisci pari o dispari").toLowerCase();
-while(scelta  != "pari" && scelta != "dispari"){
+while(scelta  != "pari" && scelta != "false"){
     scelta = prompt("Iserisci una scelta valida: PARI O DISPARI").toLowerCase();
 }
 var sceltaNumero = parseInt(prompt("inserisci un numero da 1 a 5"));
-// while(sceltaNumero  != range(1, 5) ){
-//     sceltaNumero = parseInt(prompt("inserisci un numero da 1 a 5"));
-// }
+while(sceltaNumero <1 ||sceltaNumero > 5 ){
+   sceltaNumero = parseInt(prompt("inserisci un numero da 1 a 5"));
+ }
 console.log(scelta);
 console.log(sceltaNumero);
 // Generiamo un numero random (sem)pre da 1 a 5) per il computer (usando una funzione).
@@ -41,10 +40,10 @@ var somma = numeroUtente + numeroPc;
 
 console.log(somma);
 
-if(isEven(somma) == scelta) {
+if(isEven(somma) && scelta == "pari") {
     alert("hai vinto")
 
-}else{
+} else if(!isEven(somma) && scelta == "dispari"){
     alert("hai perso")
 }
 
